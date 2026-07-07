@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Village Garage — Bodywork & Classic Restoration, East Grinstead</title>
+<meta name="description" content="East Grinstead's bodywork specialists for over 20 years. Accident repairs, classic restoration, fibreglass, welding, wheel refurbishment & insurance work. Free estimates, free courtesy car. Call 01342 318080.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoBodyShop",
+  "name": "The Village Garage",
+  "telephone": "+441342318080",
+  "email": "enquiries@thevillage-garage.com",
+  "priceRange": "££",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Unit 7 Charlwoods Road",
+    "addressLocality": "East Grinstead",
+    "addressRegion": "West Sussex",
+    "postalCode": "RH19 2HG",
+    "addressCountry": "GB"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "57" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "17:30" }
+  ]
+}
+</script>
+<style>
+:root{
+  /* klasická britská karosárna: racing green + krémová + mosaz */
+  --green:#1c4a35;
+  --green-2:#265b43;
+  --green-deep:#0f2d1f;
+  --brass:#c9a24b;
+  --brass-deep:#a9843a;
+  --cream:#f7f3e8;
+  --cream-2:#efe9d8;
+  --ink:#22271f;
+  --ink-soft:#4c5245;
+  --muted:#83887a;
+  --line:#e2dcc8;
+  --card:#ffffff;
+  --red:#b23a2a;
+  --radius:14px;
+  --shadow:0 12px 34px rgba(15,45,31,.1);
+  --font-display:"Roboto Slab",serif;
+  --font-body:"Inter",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:var(--font-body);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.container{max-width:1140px;margin:0 auto;padding:0 22px}
+section{padding:80px 0}
+h1,h2,h3{font-family:var(--font-display);line-height:1.15}
+h2{font-size:clamp(30px,4vw,42px);color:var(--green-deep);font-weight:700}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:800;letter-spacing:2.6px;text-transform:uppercase;color:var(--brass-deep);margin-bottom:14px}
+.kicker::before{content:"";width:26px;height:2px;background:var(--brass);border-radius:2px}
+.section-head{max-width:640px;margin-bottom:42px}
+.section-head p{color:var(--muted);margin-top:12px;font-size:16.5px}
+
+/* topbar */
+.topbar{background:var(--green-deep);color:#cfdcd2;font-size:13px;padding:7px 0}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.topbar strong{color:#fff}
+.topbar .dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px;background:#4ade80}
+.topbar .dot.shut{background:#ff8a80}
+@media(max-width:720px){.topbar .addr{display:none}}
+
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(247,243,232,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-badge{width:52px;height:52px;flex-shrink:0}
+.logo-text{font-family:var(--font-display);font-weight:800;font-size:21px;line-height:1.05;color:var(--green-deep)}
+.logo-text small{display:block;font-family:var(--font-body);font-weight:700;font-size:8.5px;letter-spacing:2.4px;color:var(--brass-deep);margin-top:4px;text-transform:uppercase}
+.nav-links{display:flex;gap:26px;font-weight:600;font-size:15px}
+.nav-links a{position:relative;padding:6px 0;color:var(--ink-soft)}
+.nav-links a:hover{color:var(--green)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--brass);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:15px;padding:13px 26px;border-radius:10px;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;font-family:var(--font-body)}
+.btn:active{transform:scale(.97)}
+.btn-brass{background:var(--brass);color:var(--green-deep);box-shadow:0 8px 20px rgba(201,162,75,.35)}
+.btn-brass:hover{background:var(--brass-deep);color:#fff}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(28,74,53,.3)}
+.btn-green:hover{background:var(--green-deep)}
+.btn-ghost{background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{border-color:var(--brass);color:var(--brass)}
+.btn-phone{background:transparent;border:2px solid var(--line);color:var(--green-deep);padding:11px 20px}
+.btn-phone:hover{border-color:var(--brass)}
+.burger{display:none;background:none;border:none;cursor:pointer;width:44px;height:44px;flex-direction:column;justify-content:center;align-items:center;gap:5px}
+.burger span{width:24px;height:2.5px;background:var(--green-deep);border-radius:2px}
+@media(max-width:960px){
+  .nav-links{position:fixed;inset:80px 0 auto 0;background:var(--cream);flex-direction:column;gap:0;padding:10px 22px 22px;border-bottom:1px solid var(--line);display:none}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+  .burger{display:flex}
+  .nav-cta .btn-phone{display:none}
+}
+@media(max-width:560px){
+  .logo-text{font-size:17px}
+  .logo-badge{width:44px;height:44px}
+  .nav-cta .btn-brass{padding:10px 14px;font-size:13.5px;white-space:nowrap}
+}
+
+/* hero */
+.hero{background:
+  radial-gradient(700px 400px at 88% 0%,rgba(201,162,75,.18) 0%,transparent 60%),
+  linear-gradient(165deg,var(--green-deep) 0%,var(--green) 60%,#173d2c 100%);
+  color:#fff;padding:76px 0 84px;overflow:hidden;position:relative}
+.hero::before{content:"";position:absolute;inset:0;opacity:.05;background-image:radial-gradient(circle at 2px 2px,#fff 1.2px,transparent 0);background-size:26px 26px;pointer-events:none}
+.hero .container{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:54px;align-items:center;position:relative;z-index:1}
+.hero .container>*{min-width:0}
+.badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.badge{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid rgba(201,162,75,.4);border-radius:99px;padding:7px 15px;font-size:13px;font-weight:600;color:#eee4c8}
+.badge .star{color:var(--brass)}
+.hero h1{font-size:clamp(36px,5.2vw,58px);color:#fff;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--brass)}
+.hero .sub{margin:18px 0 28px;color:#c6d4c9;font-size:17.5px;max-width:540px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-points{display:flex;flex-wrap:wrap;gap:22px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14)}
+.hero-point{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#dde7dd}
+@media(max-width:960px){.hero .container{grid-template-columns:minmax(0,1fr)};.hero{padding:56px 0 62px}}
+
+/* estimate card */
+.estimate{background:var(--cream);border-radius:18px;padding:28px;color:var(--ink);box-shadow:0 30px 80px rgba(5,20,12,.5);border:1px solid rgba(201,162,75,.5)}
+.estimate h3{font-family:var(--font-display);font-size:22px;color:var(--green-deep);margin-bottom:4px}
+.estimate>p{font-size:13.5px;color:var(--muted);margin-bottom:16px}
+.estimate label{display:block;font-size:12px;font-weight:700;color:var(--ink-soft);margin:12px 0 5px;text-transform:uppercase;letter-spacing:.6px}
+.estimate input,.estimate select,.estimate textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body);font-size:15px;background:#fff;color:var(--ink)}
+.estimate input:focus,.estimate textarea:focus{outline:none;border-color:var(--brass)}
+.estimate button{width:100%;margin-top:16px}
+.estimate .demo-note{margin-top:12px;font-size:11.5px;color:var(--muted);text-align:center}
+@media(max-width:560px){.estimate{padding:22px 18px}}
+
+/* usp strip */
+.usp{padding:0;transform:translateY(-40px);margin-bottom:-40px}
+.usp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.usp-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;box-shadow:var(--shadow);display:flex;gap:13px;align-items:flex-start}
+.usp-card .ic{width:44px;height:44px;border-radius:50%;background:#f2ead2;display:grid;place-items:center;flex-shrink:0;font-size:20px}
+.usp-card h4{font-family:var(--font-display);font-size:16.5px;color:var(--green-deep);margin-bottom:3px}
+.usp-card p{font-size:13px;color:var(--muted);line-height:1.5}
+@media(max-width:960px){.usp-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.usp-grid{grid-template-columns:1fr}}
+
+/* services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.service-card .ic{font-size:30px;margin-bottom:12px}
+.service-card h3{font-family:var(--font-display);font-size:19px;color:var(--green-deep);margin-bottom:6px}
+.service-card p{font-size:14px;color:var(--ink-soft)}
+@media(max-width:960px){.services-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.services-grid{grid-template-columns:1fr}}
+
+/* classic section */
+.classic{background:linear-gradient(165deg,var(--green-deep) 0%,var(--green) 100%);color:#fff;position:relative;overflow:hidden}
+.classic::after{content:"🔧";position:absolute;right:-30px;bottom:-60px;font-size:260px;opacity:.05;pointer-events:none}
+.classic .container{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:54px;align-items:center}
+.classic h2{color:#fff}
+.classic p{color:#c6d4c9;margin-top:14px}
+.classic-points{margin-top:24px;display:flex;flex-direction:column;gap:13px}
+.classic-point{display:flex;gap:13px;align-items:flex-start;font-size:15px;color:#dde7dd}
+.classic-point .n{width:30px;height:30px;border-radius:50%;background:var(--brass);color:var(--green-deep);font-weight:800;display:grid;place-items:center;flex-shrink:0;font-size:14px}
+.mg-card{background:rgba(255,255,255,.06);border:1px solid rgba(201,162,75,.45);border-radius:18px;padding:36px;text-align:center}
+.mg-card .roundel{font-family:var(--font-display);font-size:clamp(40px,5vw,64px);font-weight:800;color:var(--brass);line-height:1.1}
+.mg-card p{color:#dde7dd;font-size:14px;margin-top:12px}
+@media(max-width:960px){.classic .container{grid-template-columns:minmax(0,1fr);gap:36px}}
+
+/* reviews */
+.review-summary{display:flex;align-items:center;gap:18px;margin-bottom:34px;flex-wrap:wrap}
+.review-score{font-family:var(--font-display);font-size:60px;font-weight:800;line-height:1;color:var(--green-deep)}
+.review-stars{color:var(--brass-deep);font-size:21px;letter-spacing:2px}
+.review-meta{font-size:14px;color:var(--muted)}
+.review-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rh-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.rh-card .ic{font-size:24px;margin-bottom:10px}
+.rh-card h4{font-family:var(--font-display);font-size:17px;color:var(--green-deep);margin-bottom:5px}
+.rh-card p{font-size:13.5px;color:var(--ink-soft)}
+@media(max-width:960px){.review-highlights{grid-template-columns:1fr}}
+
+/* contact */
+.order{background:var(--cream-2)}
+.order .container{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px;align-items:start}
+.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;margin-bottom:18px}
+.contact-card h3{font-family:var(--font-display);font-size:20px;color:var(--green-deep);margin-bottom:14px}
+.contact-line{display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.contact-line:last-child{border-bottom:none}
+.contact-line svg{flex-shrink:0;margin-top:2px}
+.contact-line a{font-weight:700;color:var(--green-deep)}
+.contact-line a:hover{color:var(--brass-deep)}
+.hours-table{width:100%;border-collapse:collapse;font-size:14.5px}
+.hours-table td{padding:9px 0;border-bottom:1px solid var(--line)}
+.hours-table tr:last-child td{border-bottom:none}
+.hours-table td:last-child{text-align:right;font-weight:700}
+.hours-table .closed td:last-child{color:var(--red)}
+.hours-table .today td{color:var(--green-deep);font-weight:800}
+.open-badge{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:800;padding:5px 13px;border-radius:99px;margin-left:10px;vertical-align:middle}
+.open-badge.open{background:#e6f3ea;color:#1f7a4d}
+.open-badge.shut{background:#f9e9e5;color:var(--red)}
+.open-badge i{width:8px;height:8px;border-radius:50%;background:currentColor;display:inline-block}
+.map-frame{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:460px;box-shadow:var(--shadow)}
+.map-frame iframe{width:100%;height:100%;border:0;min-height:460px}
+@media(max-width:960px){.order .container{grid-template-columns:minmax(0,1fr)}.map-frame{min-height:340px}.map-frame iframe{min-height:340px}}
+
+/* footer */
+footer{background:var(--green-deep);color:#9fb3a4;padding:54px 0 96px;font-size:14px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:38px}
+footer h4{color:#fff;font-family:var(--font-display);font-size:18px;margin-bottom:14px}
+footer li{padding:5px 0}
+footer a:hover{color:var(--brass)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+@media(max-width:960px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+
+/* sticky mobile bar */
+.mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:70;display:none;grid-template-columns:1.2fr 1fr;background:var(--green-deep);border-top:1px solid rgba(255,255,255,.12);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mobile-bar a{display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 6px;border-radius:11px;font-weight:700;font-size:13.5px}
+.mobile-bar .call{background:var(--brass);color:var(--green-deep)}
+.mobile-bar .estimate-link{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.18)}
+@media(max-width:960px){.mobile-bar{display:grid}footer{padding-bottom:120px}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- topbar -->
+<div class="topbar">
+  <div class="container">
+    <div>
+      <span class="dot" id="topDot"></span><strong id="topStatus">Open today</strong> <span id="today-hours">08:30–17:30</span>
+    </div>
+    <span class="addr">Unit 7 Charlwoods Road, East Grinstead RH19 2HG</span>
+  </div>
+</div>
+
+<!-- header -->
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">
+      <svg class="logo-badge" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="30" fill="#0f2d1f" stroke="#c9a24b" stroke-width="2.5"/>
+        <circle cx="32" cy="32" r="23" fill="none" stroke="#c9a24b" stroke-width="1" opacity=".55"/>
+        <text x="32" y="39" text-anchor="middle" font-family="Roboto Slab,serif" font-weight="800" font-size="19" fill="#c9a24b">VG</text>
+        <text x="32" y="15.5" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="5.6" letter-spacing="1.4" fill="#e8dcbb">EST. 20+ YRS</text>
+        <text x="32" y="53.5" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="5.6" letter-spacing="1.2" fill="#e8dcbb">BODYWORK</text>
+      </svg>
+      <span class="logo-text">The Village Garage<small>Bodywork &amp; Classic Restoration</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#classics">Classics</a>
+      <a href="#insurance">Insurance Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Find Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-phone" href="tel:+441342318080">☎ Call</a>
+      <a class="btn btn-brass" href="#estimate">Free Estimate</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- hero -->
+<div class="hero">
+  <div class="container">
+    <div>
+      <div class="badge-row">
+        <span class="badge"><span class="star">★</span> 4.7 on Google · 57 reviews</span>
+        <span class="badge">🏅 MG Car Club recommended</span>
+        <span class="badge">🚗 Free courtesy car</span>
+      </div>
+      <h1>Bodywork done properly,<br><em>for over 20 years.</em></h1>
+      <p class="sub">From a car park scuff to a full classic restoration — The Village Garage has been East Grinstead's bodyshop of choice for more than two decades. Free estimates, honest advice, and a courtesy car while we work.</p>
+      <div class="hero-actions">
+        <a class="btn btn-brass" href="#estimate">Get a Free Estimate</a>
+        <a class="btn btn-ghost" href="tel:+441342318080">Call 01342 318080</a>
+      </div>
+      <div class="hero-points">
+        <div class="hero-point">✓ Free estimates, no obligation</div>
+        <div class="hero-point">✓ Insurance work handled for you</div>
+        <div class="hero-point">✓ Free courtesy car provision</div>
+      </div>
+    </div>
+    <div class="estimate" id="estimate-card">
+      <h3>Free estimate</h3>
+      <p>Tell us what happened — we'll come back with an honest price. No obligation.</p>
+      <form id="estimateForm">
+        <label>Your name</label>
+        <input type="text" name="name" required placeholder="John Smith">
+        <label>Phone</label>
+        <input type="tel" name="phone" required placeholder="07…">
+        <label>Car (make &amp; model)</label>
+        <input type="text" name="car" placeholder="e.g. MGB GT, Ford Focus…">
+        <label>What needs doing?</label>
+        <textarea name="details" rows="3" placeholder="e.g. dent on rear wing, respray, restoration project…"></textarea>
+        <button type="submit" class="btn btn-green">Request my free estimate</button>
+        <div class="demo-note">Prefer to talk? Call <a href="tel:+441342318080" style="font-weight:700;color:var(--green-deep)">01342 318080</a> or e-mail <a href="mailto:enquiries@thevillage-garage.com" style="font-weight:700;color:var(--green-deep)">enquiries@thevillage-garage.com</a></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- USP strip -->
+<div class="container usp">
+  <div class="usp-grid">
+    <div class="usp-card reveal"><span class="ic">💷</span><div><h4>Free estimates</h4><p>Bring the car in or send photos — you'll get an honest price before any work starts.</p></div></div>
+    <div class="usp-card reveal"><span class="ic">🚗</span><div><h4>Free courtesy car</h4><p>Stay mobile while your car is with us — courtesy car provided free of charge.</p></div></div>
+    <div class="usp-card reveal"><span class="ic">🛡️</span><div><h4>Insurance work</h4><p>We deal with the insurer and the paperwork, you just drop the car off.</p></div></div>
+    <div class="usp-card reveal"><span class="ic">🏅</span><div><h4>MG Car Club recommended</h4><p>A recommended repairer — trusted by the owners of Britain's best-loved classics.</p></div></div>
+  </div>
+</div>
+
+<!-- services -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">What we do</span>
+      <h2>One workshop, every job</h2>
+      <p>Over 20 years of bodywork experience under one roof — from small dents to complete rebuilds.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="ic">🔨</div><h3>Accident &amp; body repairs</h3><p>Dents, scrapes and collision damage repaired to a finish you won't spot.</p></div>
+      <div class="service-card reveal"><div class="ic">✨</div><h3>Light repairs &amp; scuffs</h3><p>Car park dings, bumper scuffs and paint touch-ups — quick and affordable.</p></div>
+      <div class="service-card reveal"><div class="ic">🏁</div><h3>Classic restoration</h3><p>Full or partial restorations of classic cars — panelwork, paint and detail done right.</p></div>
+      <div class="service-card reveal"><div class="ic">🔥</div><h3>Welding &amp; fabrication</h3><p>Structural welding, sills, floors and MOT welding on modern and classic cars.</p></div>
+      <div class="service-card reveal"><div class="ic">🧪</div><h3>Fibreglass work</h3><p>Specialist repairs to fibreglass panels and bodies — a rare skill, done in-house.</p></div>
+      <div class="service-card reveal"><div class="ic">⭕</div><h3>Wheel refurbishment</h3><p>Kerbed and corroded alloys brought back to as-new condition.</p></div>
+      <div class="service-card reveal"><div class="ic">🪡</div><h3>Upholstery &amp; trimming</h3><p>Seats, hoods and interior trim repaired or re-made — inside matching outside.</p></div>
+      <div class="service-card reveal"><div class="ic">🛡️</div><h3>Insurance work</h3><p>Approved repairs with the paperwork handled — and a free courtesy car meanwhile.</p></div>
+      <div class="service-card reveal"><div class="ic">🚚</div><h3>Recovery service</h3><p>Can't drive it? We'll collect the car and bring it to the workshop.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- classics -->
+<section class="classic" id="classics">
+  <div class="container">
+    <div class="reveal">
+      <span class="kicker" style="color:var(--brass)">Classic restoration</span>
+      <h2>Where old cars<br>become new again.</h2>
+      <p>Restoration is where the workshop's heart is. Panel fabrication, welding, paint, fibreglass and trimming — all the skills a proper restoration needs, under one roof, from people who've been doing it for over twenty years.</p>
+      <div class="classic-points">
+        <div class="classic-point"><span class="n">1</span><span>Honest assessment first — what the car needs, what it doesn't, and what it will cost.</span></div>
+        <div class="classic-point"><span class="n">2</span><span>Work agreed in stages, so the project never runs away from you.</span></div>
+        <div class="classic-point"><span class="n">3</span><span>Regular photo updates as your car comes back to life.</span></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="mg-card">
+        <div class="roundel">MG Car Club</div>
+        <p><strong style="color:var(--brass)">Recommended repairer</strong><br>Trusted with Britain's best-loved classics — and proud of it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- reviews -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Reviews</span>
+      <h2>What drivers say</h2>
+    </div>
+    <div class="review-summary reveal">
+      <span class="review-score">4.7</span>
+      <div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-meta">57 Google reviews · <a href="https://www.google.com/maps/place/The+Village+Garage/@51.1327569,-0.0147766,17z" target="_blank" rel="noopener" style="font-weight:700;color:var(--brass-deep)">Read them on Google →</a></div>
+      </div>
+    </div>
+    <div class="review-highlights">
+      <div class="rh-card reveal"><div class="ic">🎯</div><h4>Quality of the work</h4><p>Reviewers consistently praise the standard of the bodywork — repairs you simply can't see.</p></div>
+      <div class="rh-card reveal"><div class="ic">📸</div><h4>Kept in the loop</h4><p>Customers mention regular updates on progress while their car is in the workshop.</p></div>
+      <div class="rh-card reveal"><div class="ic">🤝</div><h4>Friendly &amp; straight</h4><p>Honest advice and a friendly team come up again and again in the reviews.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- insurance -->
+<section id="insurance" style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Insurance work</span>
+      <h2>Had a bump? We'll take it from here.</h2>
+      <p>Accident repairs are stressful enough without fighting paperwork. Bring the car to us — we work with your insurer, carry out the approved repair, and keep you moving with a free courtesy car. You deal with us, not a call centre.</p>
+    </div>
+    <a class="btn btn-green" href="#estimate">Start with a free estimate</a>
+  </div>
+</section>
+
+<!-- contact -->
+<section class="order" id="contact">
+  <div class="container">
+    <div>
+      <div class="section-head reveal" style="margin-bottom:28px">
+        <span class="kicker">Find us</span>
+        <h2>Charlwoods Road <span class="open-badge" id="openBadge"><i></i><span id="openText">Open now</span></span></h2>
+      </div>
+      <div class="contact-card reveal">
+        <h3>Contact</h3>
+        <div class="contact-line"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#a9843a" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Unit 7 Charlwoods Road,<br>East Grinstead, West Sussex, RH19 2HG</span></div>
+        <div class="contact-line"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#a9843a" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg><a href="tel:+441342318080">01342 318080</a></div>
+        <div class="contact-line"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#a9843a" stroke-width="2"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:enquiries@thevillage-garage.com">enquiries@thevillage-garage.com</a></div>
+        <div class="contact-line"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#a9843a" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg><a href="https://www.instagram.com/villagegarage.eg/" target="_blank" rel="noopener">@villagegarage.eg on Instagram</a></div>
+      </div>
+      <div class="contact-card reveal">
+        <h3>Opening hours</h3>
+        <table class="hours-table" id="hoursTable">
+          <tr data-day="1"><td>Monday</td><td>08:30 – 17:30</td></tr>
+          <tr data-day="2"><td>Tuesday</td><td>08:30 – 17:30</td></tr>
+          <tr data-day="3"><td>Wednesday</td><td>08:30 – 17:30</td></tr>
+          <tr data-day="4"><td>Thursday</td><td>08:30 – 17:30</td></tr>
+          <tr data-day="5"><td>Friday</td><td>08:30 – 17:30</td></tr>
+          <tr data-day="6" class="closed"><td>Saturday</td><td>Closed</td></tr>
+          <tr data-day="0" class="closed"><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="map-frame reveal">
+      <iframe title="Map — The Village Garage, Unit 7 Charlwoods Road, East Grinstead" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=The+Village+Garage,+Unit+7+Charlwoods+Road,+East+Grinstead+RH19+2HG&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="logo" style="margin-bottom:16px">
+          <svg class="logo-badge" viewBox="0 0 64 64" style="width:46px;height:46px">
+            <circle cx="32" cy="32" r="30" fill="#0a2015" stroke="#c9a24b" stroke-width="2.5"/>
+            <text x="32" y="39" text-anchor="middle" font-family="Roboto Slab,serif" font-weight="800" font-size="19" fill="#c9a24b">VG</text>
+          </svg>
+          <span class="logo-text" style="color:#fff">The Village Garage<small>Bodywork &amp; Classic Restoration</small></span>
+        </a>
+        <p style="max-width:290px">Bodywork, classic restoration and insurance repairs in East Grinstead — established for over 20 years.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#classics">Classic restoration</a></li>
+          <li><a href="#insurance">Insurance work</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Find us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+441342318080">01342 318080</a></li>
+          <li><a href="mailto:enquiries@thevillage-garage.com">enquiries@thevillage-garage.com</a></li>
+          <li>Unit 7 Charlwoods Road,<br>East Grinstead RH19 2HG</li>
+          <li>Mon–Fri 08:30–17:30</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 The Village Garage</span>
+      <span>MG Car Club recommended repairer · Free estimates &amp; courtesy car</span>
+    </div>
+  </div>
+</footer>
+
+<!-- sticky mobile action bar -->
+<div class="mobile-bar">
+  <a class="call" href="tel:+441342318080"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>Call</a>
+  <a class="estimate-link" href="#estimate">Free Estimate</a>
+</div>
+
+<script>
+// mobile nav
+const burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+// open/closed — Po–Pá 8:30–17:30, čas dílny (UK)
+(function(){
+  const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+  const get=t=>parts.find(p=>p.type===t)?.value;
+  const dayMap={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+  const d=dayMap[get('weekday')]??new Date().getDay();
+  const h=Number(get('hour'))+Number(get('minute'))/60;
+  const weekday=d>=1&&d<=5;
+  const open=weekday&&h>=8.5&&h<17.5;
+  const badge=document.getElementById('openBadge'),txt=document.getElementById('openText');
+  badge.classList.add(open?'open':'shut');
+  txt.textContent=open?'Open now':(weekday&&h<8.5?'Opens 8:30':'Closed now');
+  const topDot=document.getElementById('topDot'),topStatus=document.getElementById('topStatus');
+  if(!open)topDot.classList.add('shut');
+  topStatus.textContent=open?'Open today':(weekday&&h<8.5?'Opens 8:30 today':'Closed');
+  document.getElementById('today-hours').textContent=weekday?'08:30–17:30':'· back Monday 8:30';
+  const row=document.querySelector('#hoursTable tr[data-day="'+d+'"]');
+  if(row)row.classList.add('today');
+})();
+
+// estimate form (demo — naživo pošle e-mail)
+document.getElementById('estimateForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  this.innerHTML='<div style="text-align:center;padding:28px 8px"><div style="font-size:38px">✅</div><h3 style="font-family:var(--font-display);color:var(--green-deep);margin:10px 0 6px">Thank you!</h3><p style="font-size:14px;color:var(--muted)">We\'ve got your details and we\'ll be in touch with your free estimate.<br><small>(Demo preview — on the live site this goes straight to the workshop\'s e-mail.)</small></p></div>';
+});
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
