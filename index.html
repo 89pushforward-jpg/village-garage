@@ -119,6 +119,14 @@ header{position:sticky;top:0;z-index:60;background:var(--blue);box-shadow:0 2px 
 .show-card:hover img{transform:scale(1.04)}
 .show-card figcaption{padding:14px 16px;font-size:13.5px;color:var(--grey);border-top:1px solid var(--hairline)}
 .show-card figcaption b{display:block;color:var(--ink);font-size:14.5px;font-weight:700;margin-bottom:2px}
+.resto{margin-top:34px;padding-top:30px;border-top:1px solid var(--hairline)}
+.resto h3{font-size:19px;font-weight:700;color:var(--ink);margin-bottom:6px}
+.resto>p{font-size:14px;color:var(--grey);max-width:62ch}
+.resto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.resto-grid figure{border:1px solid var(--hairline);background:#fff;overflow:hidden}
+.resto-grid img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.resto-grid figcaption{padding:10px 12px;font-size:12.5px;color:var(--grey)}
+@media(max-width:860px){.resto-grid{grid-template-columns:1fr;max-width:560px}}
 .pano{margin-top:18px;border:1px solid var(--hairline);overflow:hidden;position:relative}
 .pano img{width:100%;object-fit:cover}
 .pano span{position:absolute;left:16px;bottom:12px;background:rgba(9,44,96,.85);color:#fff;font-size:12px;font-weight:600;padding:6px 14px;border-radius:4px}
@@ -271,18 +279,41 @@ footer a{color:#fff;font-weight:600}
     <h2>Fresh from the workshop</h2>
     <div class="show-grid">
       <figure class="show-card reveal">
-        <img src="assets/respray.jpg" alt="Classic car in the spray booth at The Village Garage">
+        <img src="assets/work-lotus-elan.jpg" alt="Lotus Elan S2 on the ramp inside The Village Garage workshop" loading="lazy">
+        <figcaption><b>Lotus Elan S2</b>Up on the ramp with two pairs of hands on it — exactly the sort of car we look after.</figcaption>
+      </figure>
+      <figure class="show-card reveal">
+        <img src="assets/work-land-rover.jpg" alt="Series 1 Land Rover outside The Village Garage" loading="lazy">
+        <figcaption><b>Series 1 Land Rover</b>Straight off the road and in for work — original patina and all.</figcaption>
+      </figure>
+      <figure class="show-card reveal">
+        <img src="assets/respray.jpg" alt="Classic car in the spray booth at The Village Garage" loading="lazy">
         <figcaption><b>In the booth</b>A classic mid-respray — masked, primed and about to shine again.</figcaption>
       </figure>
       <figure class="show-card reveal">
-        <img src="assets/frontage.jpg" alt="Porsche 924 outside The Village Garage workshop">
+        <img src="assets/work-shell-bare.jpg" alt="Car shell stripped back to bare metal at The Village Garage" loading="lazy">
+        <figcaption><b>Back to bare metal</b>Stripped to the shell so every panel can be checked before a single coat goes on.</figcaption>
+      </figure>
+      <figure class="show-card reveal">
+        <img src="assets/frontage.jpg" alt="Porsche 924 outside The Village Garage workshop" loading="lazy">
         <figcaption><b>Ready for collection</b>Finished and waiting out front on Charlwoods Road.</figcaption>
       </figure>
       <figure class="show-card reveal">
-        <img src="assets/forecourt.jpg" alt="Row of classic cars outside The Village Garage">
+        <img src="assets/forecourt.jpg" alt="Row of classic cars outside The Village Garage" loading="lazy">
         <figcaption><b>The forecourt line-up</b>MGs, Minis and friends — a normal day at the Village Garage.</figcaption>
       </figure>
     </div>
+
+    <div class="resto reveal">
+      <h3>The work you never see once it's painted</h3>
+      <p>Rust and structural repair is where a proper job is won or lost. We cut it out, let in fresh metal and rebuild the panel — so it doesn't come back in two winters.</p>
+      <div class="resto-grid">
+        <figure><img src="assets/work-shell-rotisserie.jpg" alt="Car shell rotated on a rotisserie for underside restoration" loading="lazy"><figcaption>On the rotisserie — underside done properly</figcaption></figure>
+        <figure><img src="assets/work-rust-roof.jpg" alt="Rust damage found along a roof gutter before repair" loading="lazy"><figcaption>Rust found along a roof gutter</figcaption></figure>
+        <figure><img src="assets/work-rust-arch.jpg" alt="Corroded rear wheel arch before rebuilding" loading="lazy"><figcaption>Corroded arch, cut back and rebuilt</figcaption></figure>
+      </div>
+    </div>
+
     <div class="pano reveal">
       <img src="assets/workshop-pano.jpg" alt="Inside The Village Garage workshop full of classic cars">
       <span>Inside the workshop</span>
